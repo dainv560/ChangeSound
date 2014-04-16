@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dip"
+    android:background="@drawable/myshape"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvSongNameWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:singleLine="true"
+        android:layout_gravity="center"
+        android:text="Songs Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:maxHeight="30pt"
+        android:maxWidth="30pt"
+        android:weightSum="100" >
+
+        <ImageButton
+            android:id="@+id/btn_previous_widget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_widget_previous"
+            android:maxHeight="30pt"
+            android:maxWidth="30pt"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_widget_previous"
+            android:layout_weight="25" />
+
+        <ImageButton
+            android:id="@+id/btn_play_widget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="@drawable/icon_widget_play"
+            android:maxHeight="50pt"
+            android:maxWidth="50pt"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_widget_play" />
+
+        <ImageButton
+            android:id="@+id/btn_next_widget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@drawable/icon_widget_next"
+            android:maxHeight="30pt"
+            android:maxWidth="30pt"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_widget_next" />
+
+    </LinearLayout>
+   
+</LinearLayout>

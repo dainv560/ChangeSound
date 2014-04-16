@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_style" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="87dp"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btRecord"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_margin="10px"
+            android:background="@drawable/btn_record"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_record" />
+
+        <ImageButton
+            android:id="@+id/btPlayRecord"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_margin="10px"
+            android:background="@drawable/btn_play"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_play" />
+
+        <Button
+            android:id="@+id/btFormat"
+             android:layout_width="50pt"
+            android:layout_height="30pt"
+            android:layout_margin="10px"
+            android:background="@drawable/btn_button_blue"
+            android:text="Format" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp" />
+
+</RelativeLayout>
