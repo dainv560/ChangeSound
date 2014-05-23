@@ -145,8 +145,12 @@ public class SongsLibrary extends ListActivity {
                 
 				Bitmap image = BitmapFactory.decodeByteArray(data, 0,
 						data.length,options);
-				Bitmap songImage = Bitmap.createScaledBitmap(image, 100 , 100 , true);
-				song.setImage(songImage);
+				if( image!=null){
+					Bitmap songImage = Bitmap.createScaledBitmap(image, 100 , 100 , true);
+					song.setImage(songImage);
+				}else{
+					song.setImage(null);
+				}
 			} else {
 				song.setImage(null);
 			}

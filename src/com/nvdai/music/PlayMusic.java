@@ -30,6 +30,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -296,6 +297,35 @@ public class PlayMusic extends FragmentActivity implements
 				overridePendingTransition(R.anim.left_in, R.anim.right_out);
 			}
 		});
+		
+		songProgressBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+			
+			@Override
+			public void onStopTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onStartTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+				//Toast.makeText(getApplicationContext(), String.valueOf(progress),Toast.LENGTH_SHORT).show();
+				if (mp.isPlaying()){
+					int nextTime  = utils.progressToTimer(progress, mp.getDuration());
+					mp.seekTo(nextTime);
+				}
+				else {
+					int currentProgress = (int) (utils.getProgressPercentage(mp.getCurrentPosition(),
+							mp.getDuration()));
+					songProgressBar.setProgress(currentProgress);
+				}
+			}
+		});
 	}
 
 	private void changeFragment(int direction) {
@@ -493,6 +523,7 @@ public class PlayMusic extends FragmentActivity implements
 
 		}
 	};
+
 
 	@Override
 	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

@@ -41,7 +41,7 @@ public class StartApp extends Activity {
 //		Log.e("topActivity", "Start CURRENT Activity ::"
 //				+ taskInfo.get(0).topActivity.getClassName());
 
-		setContentView(R.layout.starting_layout);
+		setContentView(new StartView(this));
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 		Thread loaddingThread = new Thread() {
