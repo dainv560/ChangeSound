@@ -380,6 +380,12 @@ public class PlayMusic extends FragmentActivity implements
 				if (songsList.size() == 0) {
 					Toast.makeText(PlayMusic.this, "No songs to play",
 							Toast.LENGTH_SHORT).show();
+					btn_play.setEnabled(false);
+					btn_stop.setEnabled(false);
+					btn_forward.setEnabled(false);
+					btn_backward.setEnabled(false);
+					btn_next.setEnabled(false);
+					btn_previous.setEnabled(false);
 					return;
 				}
 				mp.setDataSource(songsList.get(songIndex).getSongPath());
